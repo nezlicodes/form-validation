@@ -1,0 +1,77 @@
+$background-img-url: "green-footprint-shutterstock11.jpg";
+$headerfontfamily:'monospace';
+@mixin centerflex {
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    justify-content: center;
+    align-content: center;
+    
+}
+header{
+    h1{
+        @include centerflex;
+        color: #82b74b;
+        font-family: $headerfontfamily;
+    }
+}
+body{
+    height: 100vh;
+    background-image: url($background-img-url);
+    background-size: cover;
+    opacity: 0.8;
+}
+
+
+div{
+    @include centerflex;
+    align-items: center;
+    justify-items: center;
+    
+    form{margin-top:3rem;
+        align-self: center;
+        justify-self: center;
+        flex-direction: column;
+        @include centerflex;
+        background-image: url($background-img-url);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        background-size: contain;
+        width: 40rem;
+        padding: 2em 2em 2em 2em;
+        opacity:1;
+
+        .login-btn{
+            @include centerflex;
+            width: 20em;
+            height: 1.7em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+          
+        }
+        #remember{
+            display: flex;
+            justify-content: space-between;
+        }
+        button:hover{
+            opacity: 0.8;
+        }
+        input{
+            box-sizing: border-box;
+           
+        }
+        input[type=text], input[type=password], input[type=date],input[type=email] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+           
+          }
+  
+    }
+}
